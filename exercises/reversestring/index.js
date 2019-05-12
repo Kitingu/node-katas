@@ -16,14 +16,21 @@
 
 
 // soln2
-const reverse = ((str)=>{
-    let reversed = ""
-    for (let character of str){
-        reversed = character + reversed //add the character to the start of the reversed string
-    }
-    return reversed
+// const reverse = ((str)=>{
+//     let reversed = ""
+//     for (let character of str){
+//         reversed = character + reversed //add the character to the start of the reversed string
+//     }
+//     return reversed
 
+// })
+
+
+//solution 3
+const reverse = ((str) => {
+    return str.split('').reduce((reversed, character) => {
+        return character + reversed
+    }, '')
 })
-
 
 module.exports = reverse;
