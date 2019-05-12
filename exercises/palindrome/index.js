@@ -7,12 +7,25 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
+// soln 1
+// const palindrome = ((str) =>{
+//     let reversed = ''
+//     for (char of str){
+//         reversed = char + reversed
+//     }
+//     return reversed === str
+// }) 
+
+// soln 2
+
+
 const palindrome = ((str) =>{
+    let letters = str.split('') 
     let reversed = ''
-    for (char of str){
-        reversed = char + reversed
-    }
+    letters.forEach(letter => {
+        reversed = letter + reversed
+    });
     return reversed === str
-}) 
+})
 
 module.exports = palindrome;
